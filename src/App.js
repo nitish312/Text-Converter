@@ -11,7 +11,7 @@ function App() {
       {/* <Navbar/>  without props */}
 
       <div className="container my-3">
-        <MainForm heading="Enter your text here"/>
+        <MainForm heading="Enter your text below"/>
       </div>
     </>
   );
