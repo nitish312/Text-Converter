@@ -1,4 +1,5 @@
 import './App.css';
+import About from './components/About';
 import MainForm from './components/MainForm';
 import Navbar from './components/Navbar';
 
@@ -12,7 +13,9 @@ function App() {
 
       <div className="container my-3">
         <MainForm heading="Enter your text below"/>
+        {/* <About/> */}
       </div>
+
     </>
   );
 }
