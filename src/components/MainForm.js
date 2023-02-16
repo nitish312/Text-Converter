@@ -8,12 +8,14 @@ export default function MainForm(props) {
         // console.log("Uppercase button is clicked" + text)
         let upperText = text.toUpperCase()
         setText(upperText)
+        props.showAlert("Converted to uppercase", "success")
     }
 
     const handleLoClick = () => {
         // console.log("lowercase button is clicked")
         let lowerText = text.toLowerCase()
         setText(lowerText)
+        props.showAlert("Converted to lowercase", "success")
     }
 
     const handleFirstUpClick = () => {
@@ -23,18 +25,21 @@ export default function MainForm(props) {
         let capitalize = mySentence.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
 
         setText(capitalize)
+        props.showAlert("Converted to capitalized", "success")
     }
 
     const handleClearClick = () => {
         
         let clearText = ""
         setText(clearText)
+        props.showAlert("Textbox cleared", "success")
     }
 
     const handleInverseClick = () => {
         
         let clearText = ""
         setText(clearText)
+        props.showAlert("Inverted the text", "success")
     }
 
     const handleCopy = () => {
@@ -43,12 +48,14 @@ export default function MainForm(props) {
         copiedText.select()
         copiedText.setSelectionRange(0, 9999)
         navigator.clipboard.writeText(copiedText.value);
+        props.showAlert("Copy To Clipboard", "success")
     }
 
     const handleExtraSpace = () => {
         
         let extraSpacesRemoved = text.split(/[ ]+/)
         setText(extraSpacesRemoved.join(" "))
+        props.showAlert("Removed extra spaces", "success")
     }
     
 
