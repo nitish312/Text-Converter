@@ -7,9 +7,9 @@ import Alert from './components/Alert';
 
 import {
   BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
+  // Routes,
+  // Route,
+  // Link
 } from "react-router-dom";
 
 function App() {
@@ -52,7 +52,7 @@ function App() {
         
         <div className="container my-3">
 
-          <Routes>
+          {/* <Routes>
             <Route exact path="/about" element={<About />}>
               
             </Route>
@@ -60,9 +60,10 @@ function App() {
             <Route exact path="/" element={<MainForm showAlert={showAlert} heading="Type your text below" mode={mode}/>}>
               
             </Route>
-          </Routes>
+          </Routes> */}
 
-          {/* <MainForm showAlert={showAlert} heading="Type your text below" mode={mode}/> */}
+          <MainForm showAlert={showAlert} heading="Type your text below" mode={mode}/>
+          
           {/* <About/> */}
         </div>
 
